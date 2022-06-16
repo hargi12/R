@@ -9,8 +9,8 @@
 # a. Ensure you've set the workspace as the current working directory
 #  HOWTO: on the lower right corner window, click on files>>More>>Set as working directory
 # b. create a folder and change its name to "data" 
-#    copy you dataset to this folder. Ensure to note the data file format by right clicking
-# on the file name, properties >> type of file.
+#    copy your dataset to this folder. Ensure to note the data file format by right clicking
+#    on the file name, properties >> type of file.
 
 # Read csv file format
 
@@ -42,7 +42,7 @@ sapply(dataset1, function(x) sum(is.na(x)))
 complete_dataset <- na.omit(dataset1)
 
 # You can use R package mice to impute missing data if you don't want to loose data
-tempData <- mice(dataset1, m =50, maxit=50, meth='pmm', seed=245435)
+tempData <- mice(dataset1, m =50, maxit=50, meth='pmm', seed=245435) #advanced stuff
 
 # save the imputed dataset
 clean_dataset <- complete(tempData)
